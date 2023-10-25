@@ -1,6 +1,4 @@
-﻿using Serede.Core.Models.ViewModel;
-using System;
-using System.Collections.Generic;
+﻿using Api.Core.Models.ViewModel;
 using System.Net.Mail;
 using System.Text;
 
@@ -11,6 +9,7 @@ public class EmailService
 
     public EmailService(EmailSettings configuration)
     {
+        //teste
         _configuration = configuration;
     }
 

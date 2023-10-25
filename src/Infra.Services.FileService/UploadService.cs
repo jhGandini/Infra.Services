@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Serede.Core.Models.ViewModel;
+﻿using Api.Core.Models.ViewModel;
+using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
 
 namespace Infra.Services.FileService;

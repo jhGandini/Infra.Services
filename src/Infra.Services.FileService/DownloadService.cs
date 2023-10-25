@@ -1,10 +1,11 @@
-﻿using Serede.Core.Models.ViewModel;
+﻿using Api.Core.Models.ViewModel;
 
 namespace Infra.Services.FileService;
 public class DownloadService : Service
 {    
     public DownloadService(FileConf fileConf)
     {
+        //teste
         _fileConf = fileConf;
     }
 
@@ -13,7 +14,7 @@ public class DownloadService : Service
         var result = new ResultViewModel();
 
         if (arquivo != null)
-            result.AddNotification("arquivo", "Nenhum arquivo informado");
+            result.AddNotification("arquivo", "Nenhum arquivo informado!!");
 
         var path = MontarDiretorio(arquivo, pasta);
         var memory = new MemoryStream();
