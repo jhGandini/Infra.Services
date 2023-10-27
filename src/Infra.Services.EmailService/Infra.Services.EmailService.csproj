@@ -3,7 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>    
+
+	<PackageId>Infra.Services.EmailService</PackageId>
+	<Version>1.0.3</Version>
+	<Authors>Henrique Gandini</Authors>
+	<Company>JHG</Company>
+
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>    
   </PropertyGroup>
 
   <ItemGroup>
