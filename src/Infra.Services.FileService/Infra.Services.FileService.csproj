@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
 	<PackageId>Infra.Services.FileService</PackageId>
-	<Version>1.0.3</Version>
+	<Version>1.0.4</Version>
 	<Authors>Henrique Gandini</Authors>
 	<Company>JHG</Company>  
 	  
@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Api.Core.Models" Version="1.0.2" />
+    <PackageReference Include="Api.Core.Models" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
