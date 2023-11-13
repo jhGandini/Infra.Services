@@ -1,5 +1,4 @@
-﻿using Api.Core.Models.ViewModel;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using System.Text;
 
 namespace Infra.Services.EmailService;
@@ -13,11 +12,11 @@ public class EmailService
         _configuration = configuration;
     }
 
-    public async Task<ResultViewModel> EnviarEmail(List<string> emails, string titulo, string corpo) => await EnviarEmail(emails, titulo, corpo, null, null);
+    public async Task<EmailResult> EnviarEmail(List<string> emails, string titulo, string corpo) => await EnviarEmail(emails, titulo, corpo, null, null);
 
-    public async Task<ResultViewModel> EnviarEmail(List<string> emails, string titulo, string corpo, byte[] atachment, string atachmentName)
+    public async Task<EmailResult> EnviarEmail(List<string> emails, string titulo, string corpo, byte[] atachment, string atachmentName)
     {
-        var result = new ResultViewModel();
+        var result = new EmailResult();
         MailMessage mailMessage = new MailMessage
         {
             From = new MailAddress(_configuration.Remetente, _configuration.Nome),

@@ -1,6 +1,6 @@
-﻿using Api.Core.Models.ViewModel;
+﻿
+
 using Microsoft.AspNetCore.Http;
-using System.Net.Http.Headers;
 
 namespace Infra.Services.FileService;
 public class UploadService : Service
@@ -10,9 +10,9 @@ public class UploadService : Service
         _fileConf = fileConf;
     }
     
-    public virtual async Task<Result> Upload(IFormFile arquivo, bool gerarNome = false, string pasta = "", string[] estencoes = null)
+    public virtual async Task<FileServiceResult> Upload(IFormFile arquivo, bool gerarNome = false, string pasta = "", string[] estencoes = null)
     {
-        var result = new ResultViewModel();
+        var result = new FileServiceResult();
 
         if (arquivo == null)
             result.AddNotification("arquivo", "Nenhum arquivo recebido");

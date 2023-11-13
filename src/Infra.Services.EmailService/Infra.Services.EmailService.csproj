@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
 	<PackageId>Infra.Services.EmailService</PackageId>
-	<Version>1.0.4</Version>
+	<Version>2.0.0</Version>
 	<Authors>Henrique Gandini</Authors>
 	<Company>JHG</Company>
 
@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Api.Core.Models" Version="2.0.0" />
+    <PackageReference Include="Flunt" Version="2.0.5" />
   </ItemGroup>
 
 </Project>

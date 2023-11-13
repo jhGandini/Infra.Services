@@ -1,17 +1,14 @@
-﻿using Api.Core.Models.ViewModel;
-
-namespace Infra.Services.FileService;
+﻿namespace Infra.Services.FileService;
 public class DownloadService : Service
 {    
     public DownloadService(FileConf fileConf)
     {
-        //teste
         _fileConf = fileConf;
     }
 
     public async Task<FileDownload> Download(string arquivo, string pasta = "")
     {
-        var result = new ResultViewModel();
+        var result = new FileServiceResult();
 
         if (arquivo != null)
             result.AddNotification("arquivo", "Nenhum arquivo informado!!");
@@ -28,7 +25,7 @@ public class DownloadService : Service
 
     public async Task<Byte[]> View(string arquivo, string pasta = "")
     {
-        var result = new ResultViewModel();
+        var result = new FileServiceResult();
 
         if (arquivo != null)
             result.AddNotification("arquivo", "Nenhum arquivo informado");
